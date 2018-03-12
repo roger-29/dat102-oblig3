@@ -24,13 +24,11 @@ public class Main {
 
 		long t_1 = System.nanoTime();
 
-		long moves = p.solve();
-		System.out.println("Moves: " + moves);
-
+		p.solve();
+		
 		long t_2 = System.nanoTime();
 
 		return t_2 - t_1;
-
 	}
 
 	public static void main(String[] args) {
@@ -40,8 +38,8 @@ public class Main {
 			System.out.println(a(i));
 		}*/
 
-		System.out.println(measureHanoiTime(28) / 1000000);
-		System.out.println(measureHanoiTime(30) / 1000000);
-		System.out.println(measureHanoiTime(32) / 1000000);
+		System.out.println("16 ringer: " + measureHanoiTime(16) / 1000 + "µs");
+		System.out.println("24 ringer: " + measureHanoiTime(24) / 1000 + "µs");
+		System.out.println("32 ringer: " + measureHanoiTime(32) / 1000 + "µs");
 	}
 }
