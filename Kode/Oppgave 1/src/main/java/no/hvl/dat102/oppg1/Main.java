@@ -21,25 +21,35 @@ public class Main {
 
 	public static long measureHanoiTime(int n) {
 		TowersOfHanoi p = new TowersOfHanoi(n);
-
-		long t_1 = System.nanoTime();
+		long t_1, t_2;
+		
+		t_1 = System.nanoTime();
 
 		p.solve();
 		
-		long t_2 = System.nanoTime();
+		t_2 = System.nanoTime();
 
 		return t_2 - t_1;
 	}
 
 	public static void main(String[] args) {
-		/*System.out.println(sumRecursive(100) + "\n");
-		
-		for (int i = 0; i < 10; i++) {
-			System.out.println(a(i));
-		}*/
 
-		System.out.println("16 ringer: " + measureHanoiTime(16) / 1000 + "µs");
-		System.out.println("24 ringer: " + measureHanoiTime(24) / 1000 + "µs");
-		System.out.println("32 ringer: " + measureHanoiTime(32) / 1000 + "µs");
+		System.out.println("\n===== Oppgave 1a =====\n");
+		System.out.println("Summen av de 100 første naturlige heltallene:");
+		System.out.println(sum(100) + "\n");
+		
+		System.out.println("\n===== Oppgave 1b =====\n");
+		System.out.println("Tallrekken a, fra a_0 til a_9:");
+		for (int i = 0; i < 10; i++) {
+			System.out.print(a(i) + " ");
+		}
+		System.out.println("\n");
+
+		System.out.println("\n===== Oppgave 1c =====\n");
+		System.out.println(String.format("16 ringer: %8s µs", measureHanoiTime(16) / 1000));
+		System.out.println(String.format("24 ringer: %8s µs", measureHanoiTime(24) / 1000));
+		System.out.println(String.format("32 ringer: %8s µs", measureHanoiTime(32) / 1000));
+
+		System.out.println();
 	}
 }
