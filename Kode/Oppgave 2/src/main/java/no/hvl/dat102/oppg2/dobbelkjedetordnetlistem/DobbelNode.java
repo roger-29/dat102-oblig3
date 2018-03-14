@@ -12,7 +12,7 @@ public class DobbelNode<T> {
 	private T element;
 
 	/******************************************************************
-	 * Oppretter en tom node node.
+	 * Oppretter en tom node.
 	 ******************************************************************/
 	public DobbelNode() {
 		neste = null;
@@ -52,14 +52,14 @@ public class DobbelNode<T> {
 	}
 
 	/******************************************************************
-	 * Settter ny forrige til å peke på dnode.
+	 * Setter ny forrige til å peke på dnode.
 	 ******************************************************************/
 	public void setForrige(DobbelNode<T> dnode) {
 		forrige = dnode;
 	}
 
 	/******************************************************************
-	 * Returnerer elementet til denne noden..
+	 * Returnerer elementet til denne noden.
 	 ******************************************************************/
 	public T getElement() {
 		return element;
@@ -71,5 +71,4 @@ public class DobbelNode<T> {
 	public void setElement(T elem) {
 		element = elem;
 	}
-
 }

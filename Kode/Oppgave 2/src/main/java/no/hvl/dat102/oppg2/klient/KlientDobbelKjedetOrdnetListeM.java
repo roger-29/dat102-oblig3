@@ -15,62 +15,33 @@ public class KlientDobbelKjedetOrdnetListeM {
 			liste.leggTil(ord[i]);
 
 		// Skriver ut liste
-		System.out.println("\n\n Opprinnelig liste");
+		System.out.println("\n\nOpprinnelig liste");
 		liste.skrivListe();
 
 		// Tester om et bestem element fins
-		String element = new String("Kalle");
+		String element = new String("a");
 
 		boolean funnet = liste.fins(element);
 		if (funnet)
-			System.out.println("\nElementet " + element + " fins");
+			System.out.println("\nElementet " + element + " fins\n");
 		else
-			System.out.println("\nElementet " + element + " fins ikke");
+			System.out.println("\nElementet " + element + " fins ikke\n");
 
 		// Fjerner noen fra listen og skriver ut igjen
+		String[] elementer = new String[7];
 
-		String element1 = new String("a");
-		String element2 = new String("m");
-		String element3 = new String("e");
-		String element4 = new String("o");
-		String element5 = new String("k");
-		String element6 = new String("c");
-		String element7 = new String("s");
+		elementer[0] = new String("a");
+		elementer[1] = new String("m");
+		elementer[2] = new String("e");
+		elementer[3] = new String("o");
+		elementer[4] = new String("k");
+		elementer[5] = new String("c");
+		elementer[6] = new String("s");
 
-		System.out.println("\n Fjerner " + element1);
-		liste.fjern(element1);
-		liste.skrivListe();
-		System.out.println("\n\n");
-
-		System.out.println("\n Fjerner " + element2);
-		liste.fjern(element2);
-		liste.skrivListe();
-		System.out.println("\n\n");
-
-		System.out.println("\n Fjerner " + element3);
-		liste.fjern(element3);
-		liste.skrivListe();
-		System.out.println("\n\n");
-
-		System.out.println("\n Fjerner " + element4);
-		liste.fjern(element4);
-		liste.skrivListe();
-		System.out.println("\n\n");
-
-		System.out.println("\n Fjerner " + element5);
-		liste.fjern(element5);
-		liste.skrivListe();
-		System.out.println("\n\n");
-
-		System.out.println("\n Fjerner " + element6);
-		liste.fjern(element6);
-		liste.skrivListe();
-		System.out.println("\n\n");
-
-		System.out.println("\n Fjerner " + element7);
-		liste.fjern(element7);
-		liste.skrivListe();
-		System.out.println("\n\n");
-
+		for (int i = 0; i < elementer.length; i++) {
+			System.out.println("Fjerner " + elementer[i]);
+			liste.fjern(elementer[i]);
+			liste.skrivListe();
+		}
 	}
 }

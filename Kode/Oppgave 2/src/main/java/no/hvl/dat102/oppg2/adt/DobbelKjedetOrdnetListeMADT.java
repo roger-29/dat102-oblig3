@@ -23,5 +23,4 @@ public interface DobbelKjedetOrdnetListeMADT<T> {
    */  
   T fjern(T el);
   
-
 }
