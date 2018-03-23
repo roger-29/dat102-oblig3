@@ -1,8 +1,8 @@
-package no.hvl.dat102.oppg2.klient;
+package no.hvl.dat102.oppg2;
 
 import no.hvl.dat102.oppg2.dobbelkjedetordnetlistem.DobbelKjedetOrdnetListeM;
 
-public class KlientDobbelKjedetOrdnetListeM {
+public class Klient {
 
 	public static void main(String[] args) {
 

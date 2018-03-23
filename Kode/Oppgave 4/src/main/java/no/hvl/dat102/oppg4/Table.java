@@ -6,23 +6,48 @@ public class Table<T extends Comparable<T>> implements Sortable<T> {
 	private int length;
 
 	public Table(int n) {
-		table = ((T[]) new Comparable[1000]);
+		table = ((T[]) new Comparable[5]);
 	}
 
+	// Legger til et element på enden av tabellen
 	public void add(T s) {
+		if (length == table.length) this.expand();
+
 		table[length] = s;
 		length++;
 	}
 
+	// Utvider tabellen
 	public void expand() {
 		T[] t = ((T[]) new Comparable[table.length * 2]);
 
 		for (int i = 0; i < table.length; i++) {
 			t[i] = table[i];
 		}
+
+		table = t;
 	}
 
 	// Sorteringsmetoder
+	public T[] insertionSort() {
+		T[] arr = ((T[]) new Comparable[length]);
+
+		for (int i = 0; i < length; i++) {
+			arr[i] = table[i];
+		}
+
+		return arr;
+	}
+
+	public T[] selectionSort() {
+		T[] arr = ((T[]) new Comparable[length]);
+
+		for (int i = 0; i < length; i++) {
+			arr[i] = table[i];
+		}
+
+		return arr;
+	}
 
 	public T[] bubbleSort() {
 		T[] arr = ((T[]) new Comparable[length]);
@@ -47,16 +72,31 @@ public class Table<T extends Comparable<T>> implements Sortable<T> {
 
 	public T[] quickSort() {
 		T[] arr = ((T[]) new Comparable[length]);
+
+		for (int i = 0; i < length; i++) {
+			arr[i] = table[i];
+		}
+
 		return arr;
 	}
 
 	public T[] mergeSort() {
 		T[] arr = ((T[]) new Comparable[length]);
+
+		for (int i = 0; i < length; i++) {
+			arr[i] = table[i];
+		}
+
 		return arr;
 	}
 
 	public T[] radixSort() {
-		T[] arr = ((T[]) new Object[length]);
+		T[] arr = ((T[]) new Comparable[length]);
+
+		for (int i = 0; i < length; i++) {
+			arr[i] = table[i];
+		}
+
 		return arr;
 	}
 }

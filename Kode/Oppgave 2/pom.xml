@@ -29,7 +29,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>no.hvl.dat102.oppg2.klient.KlientDobbelKjedetOrdnetListeM</mainClass>
+							<mainClass>no.hvl.dat102.oppg2.Klient</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
